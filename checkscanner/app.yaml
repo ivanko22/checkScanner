@@ -2,4 +2,3 @@ runtime: nodejs14
 
 env_variables:
   NODE_ENV: 'production'
-  REACT_APP_DROPBOX_ACCESS_TOKEN: 'your_access_token_here'
