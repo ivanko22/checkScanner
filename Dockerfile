@@ -25,5 +25,5 @@ RUN npm install -g serve
 # Expose the port the app runs on.
 EXPOSE 8080
 
-# Run the web service on container startup.
-CMD ["npm", "start"]
+# Run the start script on container startup.
+CMD ["./start.sh"]
