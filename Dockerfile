@@ -16,11 +16,17 @@ COPY . .
 # Set environment variables
 ENV REACT_APP_DROPBOX_ACCESS_TOKEN=${REACT_APP_DROPBOX_ACCESS_TOKEN}
 
-# Build the React app.
-RUN npm run build
+# Install required tools
+RUN apt-get update && apt-get install -y curl jq
 
 # Install `serve` globally.
 RUN npm install -g serve
+
+# Make the start script executable
+RUN chmod +x start.sh
+
+# Build the React app.
+RUN npm run build
 
 # Expose the port the app runs on.
 EXPOSE 8080
