@@ -3,6 +3,9 @@ import imageCompression from 'browser-image-compression';
 import { Dropbox } from 'dropbox';
 
 const App = () => {
+
+  console.log('Dropbox Access Token:', process.env.REACT_APP_DROPBOX_ACCESS_TOKEN);
+
   const captureRef = useRef(null);
   const previewRef = useRef(null);
 
