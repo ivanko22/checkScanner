@@ -13,6 +13,9 @@ RUN npm install
 # Copy local code to the container image.
 COPY . .
 
+# Set environment variables
+ENV REACT_APP_DROPBOX_ACCESS_TOKEN=${REACT_APP_DROPBOX_ACCESS_TOKEN}
+
 # Build the React app.
 RUN npm run build
 
