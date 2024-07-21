@@ -3,6 +3,6 @@ services:
   web:
     build: .
     ports:
-      - "3000:3000"
+      - "3000:8080"
     environment:
       - REACT_APP_DROPBOX_ACCESS_TOKEN=${REACT_APP_DROPBOX_ACCESS_TOKEN}
