@@ -7,5 +7,8 @@ ACCESS_TOKEN=$(curl -s -H "Authorization: Bearer $(gcloud auth application-defau
 # Export the secret as an environment variable
 export REACT_APP_DROPBOX_ACCESS_TOKEN=$ACCESS_TOKEN
 
+# Set the port environment variable
+export PORT=8080
+
 # Start the application
-npm start
+serve -s build -l $PORT
